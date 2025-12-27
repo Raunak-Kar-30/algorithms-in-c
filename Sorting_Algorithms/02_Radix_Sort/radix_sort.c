@@ -24,25 +24,7 @@ uint32_t bits(uint32_t key, int bfr, int nb)
 // So for eg : if key is an integer value, it must use 32 bits, we write 31 to b
 void radix_ex_sort(int *array, int left, int right, int b)
 {
-    int temp, u, j;
-
-    if((right > left) && (b >= 0))
-    {
-        i = 1;
-        j = right;
-        while(j != i)
-        {
-            while((bits(a[i], b, 1) == 0) && (i < j)) i++;
-            while((bits(a[i], b, 1) != 0) && (j > i)) j--;
-            temp = a[i];
-            a[i] = a[j];
-            a[j] = temp;
-        }
-
-        if(bits(a[right], b, 1) == 0) j++;
-        radix_ex_sort(a, left, j-1, b-1);
-        radix_ex_sort(a, j, right, b-1);
-    }
+    
 }
 
 // Return l number of bits starting from the kth bit
